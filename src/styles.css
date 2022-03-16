@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Quintessential, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgb(72, 72, 168);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_image {
+  border-radius: 50%;
+  width: 8rem;
+  height: 5rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffa500;
+  font-size: 2rem;
+}
+
+.meal_categories {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 4rem;
+}
+
+footer {
+  background-color: rgb(72, 72, 168);
+  padding: 1rem 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0.75rem;
+  padding-left: 5rem;
+}
