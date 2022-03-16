@@ -1,5 +1,5 @@
 import './styles.css';
-// import Image from './images/vegan.jpg';
+import Image from './images/vegan.jpg';
 
 const btn = document.querySelectorAll('.comments');
 const popup = document.querySelector('.popup');

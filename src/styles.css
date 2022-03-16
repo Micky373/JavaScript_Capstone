@@ -48,7 +48,7 @@ body {
 
 #x {
   top: 1rem;
-  left: 59rem;
+  left: 94%;
   position: absolute;
   z-index: 3;
 }
@@ -132,7 +132,7 @@ a:hover {
 }
 
 .pop {
-  width: 60rem;
+  width: 70%;
   height: 50rem;
   background-color: #b7e4c7;
   position: relative;
@@ -163,7 +163,11 @@ a:hover {
 }
 
 .likes i {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.likes i:hover {
+  color: rgb(179, 54, 54);
 }
 
 .mealNmae {
