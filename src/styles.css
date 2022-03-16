@@ -10,6 +10,49 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+.d-none {
+  display: none;
+}
+
+.y-none {
+  overflow-y: none;
+}
+
+.d-f {
+  display: flex;
+}
+
+.addcomment {
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.addcomment input {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 7px;
+}
+
+.popup {
+  backdrop-filter: blur(5px);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+#x {
+  top: 1rem;
+  left: 59rem;
+  position: absolute;
+  z-index: 3;
+}
+
 header {
   background-color: #52b788;
   padding: 1rem 3rem;
@@ -43,16 +86,115 @@ a:hover {
 
 .meal_categories {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
   padding-right: 4rem;
+}
+
+.meal_lists {
+  height: auto;
+  width: 100%;
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemConstaner {
+  margin: 2rem;
+  width: 85%;
+  background-color: #d8f3dc;
+  border-radius: 12px;
+}
+
+.items {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-radius: 12px;
+}
+
+.item {
+  padding: 12px;
+  background-color: #8cddb9;
+  height: 40rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.item:hover {
+  background-color: #6bb191;
+}
+
+.pop {
+  width: 60rem;
+  height: 50rem;
+  background-color: #b7e4c7;
+  position: relative;
+}
+
+.img {
+  border-radius: 12px;
+}
+
+.info {
+  background-color: #6bb191;
+  border-radius: 12px;
+}
+
+.nameAndLikes {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.likes {
+  padding: 0 2.5rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes i {
+  font-size: 1.3rem;
+}
+
+.mealNmae {
+  font-size: 2rem;
+}
+
+.commentsReservation {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.3rem;
+  color: #131313;
+  background-color: #95d5b2;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #168aad;
 }
 
 footer {
   background-color: #52b788;
   color: #081c15;
   padding: 0 3rem;
-  position: absolute;
   bottom: 0;
   width: 100%;
   overflow: hidden;

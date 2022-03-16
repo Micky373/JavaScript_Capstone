@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  padding: 0;\r\n  margin: 0;\r\n  font-family: Quintessential, sans-serif;\r\n  overflow-x: hidden;\r\n}\r\n\r\nheader {\r\n  background-color: rgb(72, 72, 168);\r\n  padding: 1rem 3rem;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.logo_image {\r\n  border-radius: 50%;\r\n  width: 8rem;\r\n  height: 5rem;\r\n}\r\n\r\nli {\r\n  list-style: none;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #ffa500;\r\n  font-size: 2rem;\r\n}\r\n\r\n.meal_categories {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 3rem;\r\n  padding-right: 4rem;\r\n}\r\n\r\nfooter {\r\n  background-color: rgb(72, 72, 168);\r\n  padding: 0 3rem;\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  overflow: hidden;\r\n  font-size: 0.75rem;\r\n  padding-left: 5rem;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  padding: 0;\r\n  margin: 0;\r\n  overflow-x: hidden;\r\n  font-family: \"Hubballi\", cursive;\r\n  font-family: \"Indie Flower\", cursive;\r\n  font-family: \"Paprika\", cursive;\r\n  font-family: \"Poppins\", sans-serif;\r\n  font-family: \"Spline Sans\", sans-serif;\r\n  font-family: \"Ubuntu\", sans-serif;\r\n}\r\n\r\n.d-none {\r\n  display: none;\r\n}\r\n\r\n.y-none {\r\n  overflow-y: none;\r\n}\r\n\r\n.d-f {\r\n  display: flex;\r\n}\r\n\r\n.addcomment {\r\n  padding-bottom: 20px;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  gap: 1rem;\r\n}\r\n\r\n.addcomment input {\r\n  border: none;\r\n  padding: 0.6rem;\r\n  border-radius: 7px;\r\n}\r\n\r\n.popup {\r\n  backdrop-filter: blur(5px);\r\n  position: fixed;\r\n  height: 100vh;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 24px;\r\n}\r\n\r\n#x {\r\n  top: 3rem;\r\n  left: 59rem;\r\n  position: absolute;\r\n  z-index: 3;\r\n}\r\n\r\nheader {\r\n  background-color: #52b788;\r\n  padding: 1rem 3rem;\r\n  border-radius: 0 0 12px 12px;\r\n  box-shadow: 4px 4px 12px #1b4332;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.logo_image {\r\n  border-radius: 50%;\r\n  width: 8rem;\r\n  height: 5rem;\r\n}\r\n\r\nli {\r\n  list-style: none;\r\n}\r\n\r\na {\r\n  text-decoration: none;\r\n  color: #081c15;\r\n  font-size: 2rem;\r\n  transition: all 0.3s;\r\n}\r\n\r\na:hover {\r\n  color: #d8f3dc;\r\n}\r\n\r\n.meal_categories {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 3rem;\r\n  padding-right: 4rem;\r\n}\r\n\r\n.meal_lists {\r\n  height: auto;\r\n  width: 100%;\r\n  background-color: #131313;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.itemConstaner {\r\n  margin: 2rem;\r\n  width: 85%;\r\n  background-color: #d8f3dc;\r\n  border-radius: 12px;\r\n}\r\n\r\n.items {\r\n  padding: 30px;\r\n  display: grid;\r\n  grid-template-columns: repeat(3, 1fr);\r\n  gap: 2rem;\r\n  border-radius: 12px;\r\n}\r\n\r\n.item {\r\n  padding: 12px;\r\n  background-color: #8cddb9;\r\n  height: 40rem;\r\n  border-radius: 12px;\r\n  display: grid;\r\n  grid-template-rows: 2fr 1fr;\r\n  gap: 1rem;\r\n  transition: all 0.3s;\r\n}\r\n\r\n.item:hover {\r\n  background-color: #6bb191;\r\n}\r\n\r\n.pop {\r\n  width: 60rem;\r\n  height: 50rem;\r\n  background-color: #b7e4c7;\r\n  position: relative;\r\n}\r\n\r\n.img {\r\n  border-radius: 12px;\r\n}\r\n\r\n.info {\r\n  background-color: #6bb191;\r\n  border-radius: 12px;\r\n}\r\n\r\n.nameAndLikes {\r\n  padding-top: 25px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 1.6rem;\r\n  align-items: center;\r\n}\r\n\r\n.likes {\r\n  padding: 0 2.5rem;\r\n  width: 60%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n.likes i {\r\n  font-size: 1.3rem;\r\n}\r\n\r\n.mealNmae {\r\n  font-size: 2rem;\r\n}\r\n\r\n.commentsReservation {\r\n  padding-bottom: 20px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 1rem;\r\n}\r\n\r\n.btn {\r\n  border: none;\r\n  padding: 0.6rem 1rem;\r\n  font-size: 1.3rem;\r\n  color: #131313;\r\n  background-color: #95d5b2;\r\n  border-radius: 8px;\r\n  transition: all 0.3s;\r\n}\r\n\r\n.btn:hover {\r\n  background-color: #168aad;\r\n}\r\n\r\nfooter {\r\n  background-color: #52b788;\r\n  color: #081c15;\r\n  padding: 0 3rem;\r\n  bottom: 0;\r\n  width: 100%;\r\n  overflow: hidden;\r\n  padding-left: 5rem;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -472,12 +472,6 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
-/***/ }),
-/* 11 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "c0830839dbbd0169a2ea.jpg";
-
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -530,18 +524,6 @@ module.exports = __webpack_require__.p + "c0830839dbbd0169a2ea.jpg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -558,35 +540,25 @@ module.exports = __webpack_require__.p + "c0830839dbbd0169a2ea.jpg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _images_vegan_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
+// import Image from './images/vegan.jpg';
 
+const btn = document.querySelectorAll('.comments');
+const popup = document.querySelector('.popup');
+const x = document.querySelector('#x');
+
+[btn,x].forEach((e) => {
+    e.addEventListener('click', () => {
+        popup.classList.toggle('d-none');
+        popup.classList.toggle('d-f');
+    })
+})
 })();
 
 /******/ })()
