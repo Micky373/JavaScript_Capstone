@@ -23,6 +23,14 @@ h2 {
   margin: 0;
 }
 
+.popup_description {
+  font-size: medium;
+  color: #0c0f02;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .d-none {
   display: none;
 }
@@ -133,40 +141,48 @@ a:hover {
   gap: 1rem;
   transition: all 0.3s;
   overflow-y: auto;
+  width: auto;
 }
 
 .item:hover {
   background-color: #0e1813;
 }
 
+.pop {
+  width: 30rem;
+  height: 80%;
+  background-color: #b7e4c7;
+  position: relative;
+  align-items: center;
+}
+
+.pop:hover {
+  background-color: #7dbae2;
+}
+
 .popup {
   backdrop-filter: blur(5px);
   position: fixed;
+  top: 1rem;
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 24px;
-}
-
-.pop {
-  width: 30rem;
-  height: 30rem;
-  background-color: #b7e4c7;
-  position: relative;
-  overflow: auto;
-  align-items: center;
+  z-index: 10;
 }
 
 #x {
-  top: 1rem;
-  left: 29rem;
-  position: absolute;
-  z-index: 3;
+  top: 2rem;
+  padding-left: 28rem;
+  position: fixed;
+  z-index: 10;
+  color: #435013;
 }
 
 .img {
+  justify-self: center;
   border-radius: 12px;
 }
 
@@ -177,8 +193,11 @@ a:hover {
 }
 
 .info {
+  justify-self: center;
+  width: 20rem;
   background-color: #6bb191;
   border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 .nameAndLikes {
@@ -187,13 +206,13 @@ a:hover {
   flex-direction: column;
   gap: 1.6rem;
   align-items: center;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .likes {
   display: flex;
-  padding-left: 2rem;
-  gap: 6rem;
+  padding: 0 2rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -202,7 +221,8 @@ a:hover {
   color: white;
 }
 
-.mealNmae {
+.mealNmae,
+.popup_title {
   font-size: 1.4rem;
   width: auto;
 }
@@ -220,7 +240,7 @@ button {
   padding: 0.6rem 1rem;
   font-size: 1.3rem;
   color: #131313;
-  background-color: #95d5b2;
+  background-color: #d9ed92;
   border-radius: 8px;
   transition: all 0.3s;
 }
