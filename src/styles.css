@@ -10,6 +10,15 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9ed92;
+}
+
 h2 {
   margin: 0;
 }
