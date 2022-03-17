@@ -4,7 +4,12 @@ const mealItems = document.querySelector('.items');
 const popup = document.querySelector('.popup');
 const popimg = document.querySelector('.img');
 const popTitle = document.querySelector('.popup_title');
-const displayMealList = (meals) => {
+const likeUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yKb2fopXHs8DBr8kZdp6/likes';
+import addLike from './addLike';
+
+const displayMealList = async (meals) => {
+  const response = await fetch(`${likeUrl}`);
+  const data = await response.json();
   for (let i = 0; i < meals.length; i += 1) {
     const li = document.createElement('li');
     li.setAttribute('id', `${meals[i].idMeal}`);
@@ -16,12 +21,27 @@ const displayMealList = (meals) => {
     div1.classList.add('img');
     div1.innerHTML = img;
     div2.classList.add('info');
-    const infoContent = `<div class="nameAndLikes">
-      <div class="likes">
-        <span class="mealNmae">${meals[i].strMeal}</span>
-        <i class="fa fa-heart" aria-hidden="true"><br><br><span class="likes_count">Likes(4)</span></i>
-      </div>`;
-    div2.innerHTML = infoContent;
+    const span = document.createElement('span');
+    span.classList.add('mealNmae');
+    span.innerText = `${meals[i].strMeal}`;
+    const icon = document.createElement('i');
+    icon.setAttribute('data-id', `${meals[i].idMeal}`)
+    icon.classList.add('fa');
+    icon.classList.add('fa-heart');
+    icon.setAttribute('aria-hidden', 'true');
+    var like = '0';
+    for (let index of data) {
+      if (index.item_id == meals[i].idMeal) like = index.likes
+    }
+    icon.innerHTML = `<br><br><span class="likes_count">Likes(${like})`;
+    const div11 = document.createElement('div');
+    div11.classList.add('nameAndLikes')
+    const div12 = document.createElement('div');
+    div12.classList.add('likes');
+    div12.appendChild(span);
+    div12.appendChild(icon);
+    div11.appendChild(div12);
+    div2.appendChild(div11);
     div3.classList.add('commentsReservation');
     const cbtn = document.createElement('button');
     cbtn.classList.add('comments');
@@ -38,7 +58,6 @@ const displayMealList = (meals) => {
     mealItems.appendChild(li);
   }
   const btn = document.querySelectorAll('.comments');
-
   btn.forEach((e) => {
     e.addEventListener('click', () => {
       popup.classList.toggle('d-none');
@@ -52,5 +71,12 @@ const displayMealList = (meals) => {
       }
     });
   });
+  const icon = document.querySelectorAll('.fa');
+  icon.forEach((e) => {
+    e.addEventListener('click', (event) => {
+      const id = event.target.parentNode.dataset.id;
+      addLike(id, likeUrl);
+    })
+  })
 };
 export default displayMealList;
