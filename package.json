@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This the minimal to do list done using JavaScript, html and CSS",
   "main": "webpack.config.js",
+  "private": true,
   "scripts": {
     "test": "jest --coverage",
     "build": "webpack",
