@@ -145,17 +145,16 @@ a:hover {
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 24px;
 }
 
 .pop {
   width: 30rem;
-  height: 30rem;
+  height: 80%;
   background-color: #b7e4c7;
   position: relative;
-  overflow: auto;
   align-items: center;
 }
 
@@ -167,6 +166,7 @@ a:hover {
 }
 
 .img {
+  justify-self: center;
   border-radius: 12px;
 }
 
@@ -177,8 +177,11 @@ a:hover {
 }
 
 .info {
+  justify-self: center;
+  width: 400px;
   background-color: #6bb191;
   border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 .nameAndLikes {
