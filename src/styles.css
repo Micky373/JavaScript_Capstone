@@ -56,6 +56,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  position: fixed;
+  opacity: 0.8;
+  width: 93%;
 }
 
 .logo_image {
@@ -95,7 +99,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 2rem;
-  margin: 1rem 0;
+  margin: 8rem 0;
   box-shadow: 4px 4px 12px #1b4332;
 }
 
@@ -128,10 +132,11 @@ a:hover {
   grid-template-rows: 2fr 1fr;
   gap: 1rem;
   transition: all 0.3s;
+  overflow-y: auto;
 }
 
 .item:hover {
-  background-color: #6bb191;
+  background-color: #0e1813;
 }
 
 .popup {
@@ -165,6 +170,12 @@ a:hover {
   border-radius: 12px;
 }
 
+.meal_image {
+  height: 20rem;
+  width: auto;
+  border-radius: 1rem;
+}
+
 .info {
   background-color: #6bb191;
   border-radius: 12px;
@@ -176,6 +187,7 @@ a:hover {
   flex-direction: column;
   gap: 1.6rem;
   align-items: center;
+  overflow-y: auto;
 }
 
 .likes {
@@ -203,7 +215,7 @@ a:hover {
   align-items: center;
 }
 
-.btn {
+button {
   border: none;
   padding: 0.6rem 1rem;
   font-size: 1.3rem;
@@ -213,7 +225,7 @@ a:hover {
   transition: all 0.3s;
 }
 
-.btn:hover {
+button:hover {
   background-color: #168aad;
 }
 
