@@ -5,7 +5,7 @@ const btn = document.querySelectorAll('.comments');
 const popup = document.querySelector('.popup');
 const x = document.querySelector('#x');
 
-logoImage.src = './images/vegan.jpg'
+logoImage.src = './images/vegan.png'
 
 btn.forEach((e) => {
     e.addEventListener('click', () => {
