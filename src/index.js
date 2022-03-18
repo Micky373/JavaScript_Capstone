@@ -21,7 +21,11 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.querySelector('.name').value;
   const comment = document.querySelector('.comment').value;
+  const ul = document.querySelector('.commentList')
+  ul.childNodes[0].innerHTML = `Comments (${ul.childNodes.length})`
+  const li = document.createElement('li');
+  li.innerText = `Today ${name}: ${comment}`
+  ul.appendChild(li);
   addComment(e.target.parentNode.parentNode.parentNode.dataset.id, name, comment);
   form.reset();
-  console.log(e.target.parentNode.parentNode.parentNode.dataset.id);  
 })

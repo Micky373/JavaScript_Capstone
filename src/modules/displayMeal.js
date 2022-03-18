@@ -26,7 +26,9 @@ const displayMealList = async (meals) => {
     span.innerText = `${meals[i].strMeal}`;
     const icon = document.createElement('i');
     icon.setAttribute('data-id', `${meals[i].idMeal}`)
+    icon.setAttribute('id', `fales`);
     icon.classList.add('fa');
+    icon.classList.add('heart');
     icon.classList.add('fa-heart');
     icon.setAttribute('aria-hidden', 'true');
     var like = '0';
@@ -73,9 +75,21 @@ const displayMealList = async (meals) => {
   });
   const icon = document.querySelectorAll('.fa');
   icon.forEach((e) => {
-    e.addEventListener('click', (event) => {
+    e.addEventListener('click', async (event) => {
       const id = event.target.parentNode.dataset.id;
-      addLike(id, likeUrl);
+        if (event.target.parentNode.id == 'fales') {
+        addLike(id, likeUrl);
+      event.target.parentNode.classList.add('liked');
+      event.target.parentNode.classList.remove('heart');
+      const response = await fetch(`${likeUrl}`);
+      const data = await response.json();
+     for (let index of data) {
+       if(index.item_id == id) {
+         event.target.parentNode.id = 'true'
+         event.target.parentNode.innerHTML = `<br><br><span class="likes_count">Likes(${index.likes+1})`
+        }
+    }
+    }
     })
   })
 };

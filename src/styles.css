@@ -23,6 +23,20 @@ h2 {
   margin: 0;
 }
 
+.liked {
+  z-index: 5;
+  color: rgb(28, 165, 28);
+}
+
+.heart {
+  z-index: 5;
+  color: rgb(27, 97, 189);
+}
+
+.heart:hover {
+  color: rgb(199, 48, 22);
+}
+
 .popup_description {
   font-size: medium;
   color: #0c0f02;
@@ -218,7 +232,6 @@ a:hover {
 
 .likes i {
   font-size: 1.2rem;
-  color: white;
 }
 
 .mealNmae,

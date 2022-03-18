@@ -12,6 +12,15 @@ const popUpDisplay = async (id) => {
   mealRegion.innerHTML = `<h1 data-id="${mealObj.meals[0].idMeal}" class="popup_description">Area: ${mealObj.meals[0].strArea}</h1>`;
   mealTag.innerHTML = `<h1 class="popup_description">Tags: ${mealObj.meals[0].strTags == null ? 'N/A' : mealObj.meals[0].strTags}</h1>`;
   const ul = document.createElement('ul');
+  ul.classList.add('commentList')
+  const h1 = document.createElement('h1');
+  if (data.length) {
+    h1.innerHTML = `Comments (${data.length})`
+  } else {
+    h1.innerHTML = `Comments (0)`
+  }
+  
+  ul.appendChild(h1);
   mealTag.appendChild(ul);
   if(data.length > 0) {
   for (let index of data ) {
