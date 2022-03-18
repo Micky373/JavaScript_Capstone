@@ -13,8 +13,7 @@
 
 ## Live Demo
 
-<!-- [Live Demo Link](https://micky373.github.io/JavaScript_Capstone/dist/) -->
-**Will be available after merge**
+[Live Demo Link](https://micky373.github.io/JavaScript_Capstone/dist/)
 
 ## Clone and review it
 
