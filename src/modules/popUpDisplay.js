@@ -21,7 +21,7 @@ const popUpDisplay = async (id) => {
   if (data.length > 0) {
     for (let i = 0; i < data.length; i += 1) {
       const li = document.createElement('li');
-      li.innerText = `${data.creation_date} ${data.username}: ${data.comment}`;
+      li.innerText = `${data[i].creation_date} ${data[i].username}: ${data[i].comment}`;
       ul.appendChild(li);
     }
   }

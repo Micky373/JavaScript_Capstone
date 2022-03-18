@@ -32,8 +32,8 @@ const displayMealList = async (meals) => {
     icon.classList.add('fa-heart');
     icon.setAttribute('aria-hidden', 'true');
     let like = '0';
-    for (let i = 0; i < data.length; i += 1) {
-      if (data.item_id === meals[i].idMeal) like = data.likes;
+    for (let j = 0; j < data.length; j += 1) {
+      if (data[j].item_id === meals[i].idMeal) like = data[j].likes;
     }
     icon.innerHTML = `<br><br><span class="likes_count">Likes(${like})`;
     const div11 = document.createElement('div');
@@ -84,9 +84,9 @@ const displayMealList = async (meals) => {
         const response = await fetch(`${likeUrl}`);
         const data = await response.json();
         for (let i = 0; i < data.length; i += 1) {
-          if (data.item_id === id) {
+          if (data[i].item_id === id) {
             event.target.parentNode.id = 'true';
-            event.target.parentNode.innerHTML = `<br><br><span class="likes_count">Likes(${data.likes + 1})`;
+            event.target.parentNode.innerHTML = `<br><br><span class="likes_count">Likes(${data[i].likes + 1})`;
           }
         }
       }
