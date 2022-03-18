@@ -1,11 +1,11 @@
 import popUpDisplay from './popUpDisplay.js';
+import addLike from './addLike.js';
 
 const mealItems = document.querySelector('.items');
 const popup = document.querySelector('.popup');
 const popimg = document.querySelector('.img');
 const popTitle = document.querySelector('.popup_title');
 const likeUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yKb2fopXHs8DBr8kZdp6/likes';
-import addLike from './addLike';
 
 const displayMealList = async (meals) => {
   const response = await fetch(`${likeUrl}`);
@@ -25,19 +25,19 @@ const displayMealList = async (meals) => {
     span.classList.add('mealNmae');
     span.innerText = `${meals[i].strMeal}`;
     const icon = document.createElement('i');
-    icon.setAttribute('data-id', `${meals[i].idMeal}`)
-    icon.setAttribute('id', `fales`);
+    icon.setAttribute('data-id', `${meals[i].idMeal}`);
+    icon.setAttribute('id', 'fales');
     icon.classList.add('fa');
     icon.classList.add('heart');
     icon.classList.add('fa-heart');
     icon.setAttribute('aria-hidden', 'true');
-    var like = '0';
-    for (let index of data) {
-      if (index.item_id == meals[i].idMeal) like = index.likes
+    let like = '0';
+    for (let i = 0; i < data.length; i += 1) {
+      if (data.item_id === meals[i].idMeal) like = data.likes;
     }
     icon.innerHTML = `<br><br><span class="likes_count">Likes(${like})`;
     const div11 = document.createElement('div');
-    div11.classList.add('nameAndLikes')
+    div11.classList.add('nameAndLikes');
     const div12 = document.createElement('div');
     div12.classList.add('likes');
     div12.appendChild(span);
@@ -76,21 +76,21 @@ const displayMealList = async (meals) => {
   const icon = document.querySelectorAll('.fa');
   icon.forEach((e) => {
     e.addEventListener('click', async (event) => {
-      const id = event.target.parentNode.dataset.id;
-        if (event.target.parentNode.id == 'fales') {
+      const { id } = event.target.parentNode.dataset;
+      if (event.target.parentNode.id === 'fales') {
         addLike(id, likeUrl);
-      event.target.parentNode.classList.add('liked');
-      event.target.parentNode.classList.remove('heart');
-      const response = await fetch(`${likeUrl}`);
-      const data = await response.json();
-     for (let index of data) {
-       if(index.item_id == id) {
-         event.target.parentNode.id = 'true'
-         event.target.parentNode.innerHTML = `<br><br><span class="likes_count">Likes(${index.likes+1})`
+        event.target.parentNode.classList.add('liked');
+        event.target.parentNode.classList.remove('heart');
+        const response = await fetch(`${likeUrl}`);
+        const data = await response.json();
+        for (let i = 0; i < data.length; i += 1) {
+          if (data.item_id === id) {
+            event.target.parentNode.id = 'true';
+            event.target.parentNode.innerHTML = `<br><br><span class="likes_count">Likes(${data.likes + 1})`;
+          }
         }
-    }
-    }
-    })
-  })
+      }
+    });
+  });
 };
 export default displayMealList;
