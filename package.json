@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open",
     "watch": "jest --watch"
